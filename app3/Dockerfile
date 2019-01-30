@@ -1,0 +1,3 @@
+FROM app3-base:live
+
+# All other commands...
