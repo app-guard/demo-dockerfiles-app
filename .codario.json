@@ -33,7 +33,7 @@
         },
         "files": {
           "app1/Dockerfile": {
-           "nginx11": "none"
+           "nginx": "patch"
           }
         }
       }
