@@ -34,7 +34,7 @@
         },
         "files": {
           "app1/Dockerfile": {
-           "nginx": "patch"
+           "nginx": "major"
           }
         }
       }
