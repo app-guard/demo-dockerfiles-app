@@ -29,7 +29,8 @@
       "policies": {
         "images": {
           "mongo": "patch",
-          "nginx": "none"
+          "nginx": "none",
+          "php": "minor"
         },
         "files": {
           "app1/Dockerfile": {
