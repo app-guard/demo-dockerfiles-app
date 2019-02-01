@@ -29,11 +29,11 @@
       "policies": {
         "images": {
           "mongo": "patch",
-          "nginx": "minor"
+          "nginx": "none"
         },
         "files": {
           "app1/Dockerfile": {
-           "nginx": "none"
+           "nginx11": "none"
           }
         }
       }
