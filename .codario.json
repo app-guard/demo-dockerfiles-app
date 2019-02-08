@@ -19,24 +19,5 @@
         }
       }
     ]
-  },
-  "extra": {
-      "update_policy": "patch",
-      "dockerfiles" : [
-        "Dockerfile.prod",
-        "Dockerfile.stage"
-      ],
-      "policies": {
-        "images": {
-          "mongo": "patch",
-          "nginx": "none",
-          "php": "minor"
-        },
-        "files": {
-          "app1/Dockerfile": {
-           "nginx": "minor"
-          }
-        }
-      }
   }
 }
