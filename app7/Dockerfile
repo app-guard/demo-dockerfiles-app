@@ -1,0 +1,3 @@
+FROM webdevops/php-apache:latest
+
+# All other commands...
