@@ -1,10 +1,10 @@
 {
     "integrations": {
       "project_management_system": {
-          "credential": "jira-default",
+          "credential": "asana",
           "project": "AD",
-          "tracker": "Task",
-          "priority": "Las",
+          "tracker": "defaut",
+          "priority": "defaut",
           "task_status_to_codario_mapping": {
             "In Progress": "execute_update",
             "Ready to test": "ready_to_test",
