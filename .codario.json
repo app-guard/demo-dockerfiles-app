@@ -1,8 +1,8 @@
 {
     "integrations": {
       "project_management_system": {
-          "credential": "asana",
-          "project": "AD",
+          "credential": "ddfcfddf",
+          "project": "1145113180529756",
           "tracker": "defaut",
           "priority": "defaut",
           "task_status_to_codario_mapping": {
