@@ -2,7 +2,7 @@
     "integrations": {
       "project_management_system": {
           "credential": "jira-default",
-          "project": "project-key",
+          "project": "AD",
           "tracker": "Task",
           "priority": "Low",
           "task_status_to_codario_mapping": {
