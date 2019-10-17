@@ -3,8 +3,8 @@
       "project_management_system": {
           "credential": "ddfcfddf",
           "project": "1145113180529756",
-          "tracker": "defaut",
-          "priority": "defaut",
+          "tracker": "default",
+          "priority": "default",
           "task_status_to_codario_mapping": {
             "In progress": "execute_update",
             "Ready to test": "ready_to_test",
