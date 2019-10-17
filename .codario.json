@@ -12,7 +12,7 @@
           },
           "task_status_from_codario_mapping": {
             "closed": "Done",
-            "new_updates_available": "To Do"
+            "new_updates_available": "Test Passed"
           }
         }
     
