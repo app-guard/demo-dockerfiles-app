@@ -1,3 +1,3 @@
-FROM nginx:1.13-alpine
+FROM nginx:1.17-alpine
 
 # All other commands...
