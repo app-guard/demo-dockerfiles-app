@@ -1,29 +1,32 @@
 {
-    "integrations": {
-      "project_management_system": {
-          "credential": "ddfcfddf",
-          "project": "1145113180529756",
-          "tracker": "default",
-          "priority": "default",
-          "task_status_to_codario_mapping": {
-            "In progress": "execute_update",
-            "Ready to test": "ready_to_test",
-            "Done": "closed"
-          },
-          "task_status_from_codario_mapping": {
-            "closed": "Done",
-            "new_updates_available": "In progress"
-          }
+  "integrations": {
+    "git_provider": {
+      "credential": "user:github",
+      "target": "local-dev"
+    }
+  },
+  "update_behavior": {
+    "auto_start_updates": "no",
+    "skip_manual_testing": "no",
+    "source_branch": "local-dev",
+    "destination_branch": "updates/[task:id]",
+    "handle_packages": "dev_and_prod",
+    "create_tasks_for": "all_packages"
+  },
+  "events": {
+    "test_passed": [
+      {
+        "accept_pull_request": {
+          "delete_source_branch": "yes"
         }
-    
-    },
-    "update_behavior": {
-        "source_branch": "dev",
-      "destination_branch": "updates/[task:id]",
-      "auto_start_updates": "no",
-      "skip_manual_testing": "no",
-      "handle_packages": "dev_and_prod",
-      "create_tasks_for": "all_packages"
-    },
-    "events": {}
+      }
+    ],
+    "test_failed": [
+      {
+        "decline_pull_request": {
+          "delete_source_branch": "no"
+        }
+      }
+    ]
+  }
 }
