@@ -2,13 +2,13 @@
   "integrations": {
     "git_provider": {
       "credential": "user:github",
-      "target": "updates/aeKzbEKd"
+      "target": "updates/DjKXjbr6"
     }
   },
   "update_behavior": {
     "auto_start_updates": "no",
     "skip_manual_testing": "no",
-    "source_branch": "updates/aeKzbEKd",
+    "source_branch": "updates/DjKXjbr6",
     "destination_branch": "updates/[task:id]",
     "handle_packages": "dev_and_prod",
     "create_tasks_for": "all_packages"
