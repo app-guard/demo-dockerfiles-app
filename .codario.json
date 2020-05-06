@@ -1,32 +1,43 @@
 {
-  "integrations": {
-    "git_provider": {
-      "credential": "user:github",
-      "target": "local-dev"
+    "integrations": {
+        "git_provider": {
+            "credential": "github-general",
+            "target": "local-dev"
+        }
+    },
+    "update_behavior": {
+        "auto_start_updates": "no",
+        "skip_manual_testing": "no",
+        "source_branch": "local-dev",
+        "destination_branch": "updates/[task:id]",
+        "handle_packages": "dev_and_prod",
+        "create_tasks_for": "all_packages"
+    },
+    "events": {
+        "new_updates_available": [
+            {
+                "sendmail": {
+                    "emails": "[workspace:members|,|admins+users][member:email][/workspace:members]",
+                    "subject": "Test subject - Composer Project",
+                    "message": "Test message - Composer Project",
+                    "cc": "",
+                    "bcc": ""
+                }
+            }
+        ],
+        "test_passed": [
+            {
+                "accept_pull_request": {
+                    "delete_source_branch": "yes"
+                }
+            }
+        ],
+        "test_failed": [
+            {
+                "decline_pull_request": {
+                    "delete_source_branch": "no"
+                }
+            }
+        ]
     }
-  },
-  "update_behavior": {
-    "auto_start_updates": "no",
-    "skip_manual_testing": "no",
-    "source_branch": "local-dev",
-    "destination_branch": "updates/[task:id]",
-    "handle_packages": "dev_and_prod",
-    "create_tasks_for": "all_packages"
-  },
-  "events": {
-    "test_passed": [
-      {
-        "accept_pull_request": {
-          "delete_source_branch": "yes"
-        }
-      }
-    ],
-    "test_failed": [
-      {
-        "decline_pull_request": {
-          "delete_source_branch": "no"
-        }
-      }
-    ]
-  }
 }
