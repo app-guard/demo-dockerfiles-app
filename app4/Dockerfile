@@ -1,5 +1,5 @@
-FROM alpine:3.12
+FROM alpine:3.6
 
-FROM mongo:3.6.11-stretch AS mongo
+FROM mongo:3.6.10-stretch AS mongo
 
 # All other commands...
