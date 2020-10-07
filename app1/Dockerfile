@@ -1,3 +1,3 @@
-FROM nginx:1.15.4
+FROM nginx:1.15.12
 
 # All other commands...
